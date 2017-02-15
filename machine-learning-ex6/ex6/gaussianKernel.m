@@ -7,7 +7,8 @@ function sim = gaussianKernel(x1, x2, sigma)
 x1 = x1(:); x2 = x2(:);
 
 % You need to return the following variables correctly.
-sim = 0;
+delta = x1 - x2;
+sim = exp(-(delta' * delta) / (2 * sigma^2));
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: Fill in this function to return the similarity between x1
